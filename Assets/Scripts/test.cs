@@ -1,19 +1,26 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class test : MonoBehaviour
 {
-    [SerializeField] private float rotationSpeed = 90f; // Degrees per second
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public GameObject thisIsAGameObject;
+    public Transform thisIsATransform;
+    public float rotationSpeed = 90f;
+    public move moveScript; // Reference to the move script component
 
-    // Update is called once per frame
     void Update()
     {
-        // Rotate the cube around the Y axis
-        transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+        thisIsATransform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (moveScript != null)
+            {
+                moveScript.Move();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            thisIsATransform.Translate(1*Time.deltaTime, 0, 0);
+        }
     }
 }
