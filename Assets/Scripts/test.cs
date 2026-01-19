@@ -10,17 +10,6 @@ public class test : MonoBehaviour
 
     void Update()
     {
-        thisIsATransform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (moveScript != null)
-            {
-                moveScript.Move();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            thisIsATransform.Translate(1*Time.deltaTime, 0, 0);
-        }
+       
     }
 }
