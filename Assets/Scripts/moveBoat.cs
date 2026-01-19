@@ -50,7 +50,7 @@ public class moveBoat : MonoBehaviour
             transform.position = centerPoint + offsetFromCenter.normalized * radius;
             
             // Reflect the direction off the border (bounce back)
-            // Get th se normal vector pointing from center to boat
+            // Get the normal vector pointing from center to boat
             Vector3 normal = offsetFromCenter.normalized;
             
             // Reflect the direction vector off the normal
@@ -76,7 +76,7 @@ public class moveBoat : MonoBehaviour
             0f,
             Random.Range(-1f, 1f)
         ).normalized;
- s    }
+    }
     
     // Visualize the radius in the editor
     void OnDrawGizmosSelected()
